@@ -3,27 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Техномарт</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
-    <div class="main-header-top">
+    <div class="main-header-top-bar">
       <div class="container">
         <div class="logo">
           <a class="logo-link">Техномарт</a>
         </div>
         <form class="form" action="#" method="post">
-          <label class="form-item">
-            <input class="search-input" type="search" name="search"  placeholder="Поиск:">
-            <span class="search-icon">поиск</span>
+          <label class="form-text-item">
+            <input class="form-text-input" type="search" name="search"  placeholder="Поиск:">
+            <span class="form-text-field">поиск</span>
           </label>
         </form>
         <ul class="user-content">
           <li class="user-content-item">
-            <a class="user-content-link" href="#">Закладки: 0</a>
+            <a class="user-content-link" href="#">Закладки:
+              <span class="user-content-link-count">0</span>
+            </a>
           </li>
           <li class="user-content-item">
-            <a class="user-content-link" href="#">Корзина: 0</a>
+            <a class="user-content-link" href="#">Корзина:
+              <span class="user-content-link-count">0</span>
+            </a>
           </li>
         </ul>
         <div class="order">
@@ -33,12 +38,12 @@
     </div>
     <div class="main-header-content">
       <div class="container">
-        <section class="description-shop">
+        <div class="description-shop">
           <p class="description-shop-text">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        </section>
+        </div>
         <section class="contacts-shop">
           <p class="contacts-shop-tel">
-            <a  class="contacts-shop-tel-link" href="tel:+7(812) 555-05-55">+7(812) 555-05-55</a>
+            <a class="contacts-shop-link" href="tel:+7(812) 555-05-55">+7(812) 555-05-55</a>
           </p>
           <p class="contacts-shop-addres">г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
         </section>
