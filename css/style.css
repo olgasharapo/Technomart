@@ -216,6 +216,10 @@ p {
   box-sizing: border-box;
 }
 
+.user-content-item.active {
+  background-color: #ee3643;
+}
+
 .user-content-item:hover {
   background-color: #212a3a;
 }
@@ -303,7 +307,7 @@ p {
 }
 
 .contacts-shop-tel {
-  margin: 0;
+  margin-bottom: 5px;
 }
 
 .contacts-shop-link {
@@ -342,10 +346,15 @@ p {
   list-style: none;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.user-block-logout {
+  display: block;
 }
 
 .user-block-link {
-  display: inline-block;
+  display: block;
   padding: 14px 20px;
   color: #000000;
   font-size: 24px;
@@ -358,11 +367,12 @@ p {
   margin-right: 10px;
 }
 
-.login::before {
+.login::before,
+.logout::before,
+.logout::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 14px;
   transform: translateY(-50%);
   width: 20px;
   height: 17px;
@@ -370,11 +380,37 @@ p {
   opacity: 0.3;
 }
 
-.user-block-link:hover::before {
+.login::before {
+  left: 14px;
+}
+
+.logout {
+  position: relative;
+  width: 300px;
+  padding-left: 45px;
+  padding-right: 40px;
+  margin-bottom: 10px;
+}
+
+.logout::before{
+  left: 14px;
+  height: 18px;
+  background-position: -10px -495px;
+}
+
+.logout::after {
+  right: 10px;
+  width: 21px;
+  background-position: -10px -441px;
+}
+
+.user-block-link:hover::before,
+.logout:hover::after {
   opacity: 1;
 }
 
-.user-block-link:active::before {
+.user-block-link:active::before,
+.logout:active::after {
   opacity: 0.6;
 }
 
@@ -382,8 +418,47 @@ p {
   color: #ee3643;
 }
 
+.logout:hover {
+  color: #000000;
+}
+
 .user-block-link:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.user-submenu {
+}
+
+.user-submenu-link {
+  position: relative;
+  display: inline-block;
+  margin-left: 25px;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.user-submenu-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 3px;
+  background-color: #32425c;
+  border-radius: 50%;
+}
+
+.user-submenu-link:first-child::before {
+  display: none;
+}
+
+.user-submenu-link:hover {
+  color: #ee3643;
+}
+
+.user-submenu-link:active {
+  color: rgba(50, 61, 92, 0.5);
 }
 
 .main-navigation {
