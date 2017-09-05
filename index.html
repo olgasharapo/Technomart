@@ -58,13 +58,13 @@
         <nav class="main-navigation">
           <ul class="main-navigation-list">
             <li class="main-navigation-item">
-              <a class="main-navigation-link" href="#">Главная</a>
+              <a class="main-navigation-link">Главная</a>
             </li>
             <li class="main-navigation-item">
               <a class="main-navigation-link" href="#">Компания</a>
             </li>
             <li class="main-navigation-item">
-              <a class="main-navigation-link" href="#">Каталог</a>
+              <a class="main-navigation-link" href="catalog.html">Каталог</a>
             </li>
             <li class="main-navigation-item">
               <a class="main-navigation-link" href="#">Новости</a>
@@ -229,22 +229,22 @@
     <section class="service">
       <div class="container">
         <div class="service-promo">
-          <h1 class="promo-title">Сервисы</h1>
-          <p class="promo-text">Хороший интернет-магазин отличается от плохого не только ценами!
+          <h2 class="service-promo-title">Сервисы</h2>
+          <p class="service-promo-text">Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
         <div class="service-slider">
-          <input class="slider-radio-input" id="btn-10" name="menu" type="radio" checked>
-          <input class="slider-radio-input" id="btn-11" name="menu" type="radio">
-          <input class="slider-radio-input" id="btn-12" name="menu" type="radio">
+          <input class="slider-radio-input" id="service-slider-btn-1" name="menu" type="radio" checked>
+          <input class="slider-radio-input" id="service-slider-btn-2" name="menu" type="radio">
+          <input class="slider-radio-input" id="service-slider-btn-3" name="menu" type="radio">
           <div class="service-slider-controls">
-            <label class="service-slider-control" for="btn-10">
+            <label class="service-slider-control" for="service-slider-btn-1">
               <span class="slider-control-name">Доставка</span>
             </label>
-            <label class="service-slider-control" for="btn-11">
+            <label class="service-slider-control" for="service-slider-btn-2">
               <span class="slider-control-name">Гарантия</span>
             </label>
-            <label class="service-slider-control" for="btn-12">
+            <label class="service-slider-control" for="service-slider-btn-3">
               <span class="slider-control-name">Кредит</span>
             </label>
           </div>
@@ -288,14 +288,14 @@
     </section>
     <section class="description container">
       <div class="description-company">
-        <h1 class="description-title">КОМПАНИЯ «Техномарт»</h1>
+        <h2 class="description-title">КОМПАНИЯ «Техномарт»</h2>
         <p class="description-text">
           Настоящий мужской шоппинг начинается здесь!
           Огромный выбор товаров для ремонта и строительства
           не оставит равнодушными любителей сэкномить на гастарбайтерах.
         </p>
-        <p class="description-text description-list-text">
-          Мы можем доставить ваш товар в самые отдаленные точки России!
+        <p class="description-text">
+          Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями:
         </p>
         <ul class="description-list">
@@ -306,7 +306,7 @@
         <a class="btn" href="#">Подробнее о компании</a>
       </div>
       <div class="description-contact">
-        <h1 class="description-title">Котакты</h1>
+        <h2 class="description-title">Котакты</h2>
         <p class="description-contact-text">Вы можете забрать товар сами, заехав в наш офис:</p>
         <div class="map">
           <img class="map-img" src="img/map.jpg" alt="Карта" width="300" height="158">
@@ -339,10 +339,14 @@
           </li>
         </ul>
       </nav>
-      <p class="footer-addres">
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        +7(812) 555-05-55
-      </p>
+      <div class="footer-addres">
+        <address class="footer-addres-text">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </address>
+        <p class="footer-addres-tel">
+          <a class="footer-addres-link" href="tel:+7(812) 555-05-55">+7(812) 555-05-55</a>
+        </p>
+      </div>
       <nav class="footer-navigation">
         <ul class="footer-navigation-list">
           <li class="footer-navigation-item">
@@ -374,13 +378,13 @@
           <a class="social-btn social-btn-inst" href="#">insagram</a>
         </section>
         <section class="bottom-bar-contacts">
-          <div class="contact">
+          <div class="bottom-bar-contact">
             <p class="bottom-bar-text">Обратная связь:</p>
-            <a class="contact-link" href="#">mail@htmlacademy.ru</a>
+            <a class="bottom-bar-contact-link" href="#">mail@htmlacademy.ru</a>
           </div>
-          <div class="contact">
+          <div class="bottom-bar-contact">
             <p class="bottom-bar-text">Разработано-</p>
-            <a class="contact-link" href="https://htmlacademy.ru">htmlacademy.ru</a>
+            <a class="bottom-bar-contact-link" href="https://htmlacademy.ru">htmlacademy.ru</a>
           </div>
         </section>
       </div>
