@@ -324,12 +324,16 @@ p {
 .contacts-shop-link::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 12px;
   left: 15px;
-  transform: translateY(-50%);
   width: 19px;
   height: 19px;
   background: url("../img/sprite.png") no-repeat -40px -497px;
+}
+
+.contacts-shop-link:hover::before {
+  animation-name: shake;
+  animation-duration: 0.5s;
 }
 
 .contacts-shop-addres {
@@ -426,9 +430,6 @@ p {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-submenu {
-}
-
 .user-submenu-link {
   position: relative;
   display: inline-block;
@@ -497,6 +498,15 @@ p {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.main-navigation-link.active:hover {
+  background-color: #32425c;
+}
+
+.main-navigation-link.active:active {
+  color: #ffffff;
+  background-color: #32425c;
+}
+
 .categories {
   width: 100%;
   padding: 55px 0;
@@ -539,9 +549,12 @@ p {
 .category-item::after {
   position: absolute;
   content: "";
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30px;
   background: url("../img/sprite.png") no-repeat;
+}
+
+.category-item:hover::after {
+  transform: scale(1.1);
 }
 
 .category-item.materials {
@@ -582,6 +595,7 @@ p {
 }
 
 .category-item.sale::after {
+  top: 25px;
   right: 45px;
   width: 59px;
   height: 72px;
@@ -1325,17 +1339,33 @@ p {
   padding: 0;
   margin: 0;
   padding: 20px 0;
-  font-size: 0;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  padding-right: 40px;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 17px;
+  width: 8px;
+  height: 12px;
+  background: url("../img/icon-right-small.png")
+}
+
+.breadcrumbs-item:last-child::after {
+  display: none;
 }
 
 .breadcrumbs-link {
-  display: inline-block;
-  margin: 0 20px;
+  display: block;
   font-size: 13px;
   color: #000000;
   text-transform: uppercase;
   font-family: "PTSans", "Arial", sans-serif;
-  vertical-align: top;
 }
 
 .breadcrumbs-link.home {
@@ -1343,41 +1373,6 @@ p {
   width: 14px;
   height: 12px;
   background: url("../img/sprite.png") no-repeat -64px -324px;
-  margin-left: 0;
-}
-
-.breadcrumbs-arrow {
-  position: relative;
-  width: 10px;
-  height: 8px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  padding: 0;
-}
-
-.breadcrumbs-arrow::before,
-.breadcrumbs-arrow::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  background-color: #c5c9d1;
-}
-
-.breadcrumbs-arrow::before {
-  top: 0;
-  left: 0;
-  transform: rotate(45deg);
-}
-
-.breadcrumbs-arrow::after {
-  bottom: 0;
-  left: 0;
-  transform: rotate(-45deg);
-}
-.breadcrumbs-item:last-child .breadcrumbs-arrow {
-  display: none;
 }
 
 .page-title {
@@ -1580,6 +1575,7 @@ p {
 
 .sorting {
   display: flex;
+  justify-content: space-between;
   padding: 10px 15px;
   font-size: 13px;
   line-height: 18px;
@@ -1591,56 +1587,73 @@ p {
 }
 
 .sorting-title {
+  display: block;
   font-weight: 400;
-  flex-grow: 2;
+  width: 140px;
+}
+
+.sorting-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 460px;
+}
+
+.sorting-item {
+  margin-right: 50px;
+}
+
+.sorting-arrow-item {
+  margin-right: 20px;
+}
+
+.sorting-arrow-item:last-child {
+  margin-right: 0;
 }
 
 .sorting-link {
   color: rgba(0, 0, 0, 0.3);
-  flex-grow: 0.5;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: #ee3643;
+  border-bottom: 1px dotted #ee3643;
 }
 
-.sorting-arrow {
+.sorting-arrow-link {
   display: block;
   border: 8px solid #000000;
   opacity: 0.3;
   cursor: pointer;
 }
 
-.sorting-arrow:hover {
+.sorting-arrow-link:hover {
   opacity: 1;
 }
 
-.sorting-arrow.down {
+.sorting-arrow-link.down {
   border-bottom-width: 0px;
   border-right-color: transparent;
   border-left-color: transparent;
-  margin-right: 20px;
   margin-top: 4px;
 }
 
-.sorting-arrow.app {
+.sorting-arrow-link.app {
   border-top-width: 0px;
   border-right-color: transparent;
   border-left-color: transparent;
-  margin-bottom: 4px;
+  margin-top: 4px;
 }
 
 .sorting-link.active {
   color: #ee3643;
 }
 
-.sorting-arrow.active {
+.sorting-arrow-link.active {
   border-top-color: #ee3643;
   opacity: 1;
 }
 
 .sorting-link:not(.active):hover {
   color: #000000;
-  text-decoration-style: solid;
+  border-bottom-style: solid;
 }
 
 .paginations {
@@ -1697,4 +1710,16 @@ p {
 
 .catalog-description-text {
   padding-right: 30px;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(2px);
+  }
 }

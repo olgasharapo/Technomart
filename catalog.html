@@ -65,7 +65,7 @@
               <a class="main-navigation-link" href="#">Компания</a>
             </li>
             <li class="main-navigation-item">
-              <a class="main-navigation-link">Каталог</a>
+              <a class="main-navigation-link active">Каталог</a>
             </li>
             <li class="main-navigation-item">
               <a class="main-navigation-link" href="#">Новости</a>
@@ -88,19 +88,15 @@
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link home" href="#">Главная</a>
-        <button class="breadcrumbs-arrow" type="button">next</button>
       </li>
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="#">Каталог</a>
-        <button class="breadcrumbs-arrow" type="button">next</button>
       </li>
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="#">Инструмент</a>
-        <button class="breadcrumbs-arrow" type="button">next</button>
       </li>
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="#">Перфораторы</a>
-        <button class="breadcrumbs-arrow" type="button">next</button>
       </li>
     </ul>
     <div class="page-title">
@@ -109,7 +105,7 @@
     <div class="catalog-content">
       <div class="catalog-left-column">
         <h2 class="catalog-left-column-title">Фильтр:</h2>
-        <div class="catalog-left-column-form">
+        <div class="form-catalog">
           <form action="#" method="post">
             <fieldset class="form-group">
               <div class="form-group-title">Цена:</div>
@@ -172,11 +168,23 @@
       <div class="catalog-right-column">
         <div class="sorting">
           <b class="sorting-title">Сортировать:</b>
-          <a class="sorting-link active" href="#">по цене</a>
-          <a class="sorting-link" href="#">по типу</a>
-          <a class="sorting-link" href="#">по функционалу</a>
-          <a class="sorting-arrow down active"></a>
-          <a class="sorting-arrow app"></a>
+          <ul class="sorting-list">
+            <li class="sorting-item">
+              <a class="sorting-link active" href="#">по цене</a>
+            </li>
+            <li class="sorting-item">
+              <a class="sorting-link" href="#">по типу</a>
+            </li>
+            <li class="sorting-item">
+              <a class="sorting-link" href="#">по функционалу</a>
+            </li>
+            <li class="sorting-item sorting-arrow-item">
+              <a class="sorting-arrow-link down active"></a>
+            </li>
+            <li class="sorting-item sorting-arrow-item">
+              <a class="sorting-arrow-link app"></a>
+            </li>
+          </ul>
         </div>
         <div class="catalog-items">
           <article class="catalog-item">
